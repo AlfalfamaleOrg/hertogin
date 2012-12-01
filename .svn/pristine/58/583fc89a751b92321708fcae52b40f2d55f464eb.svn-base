@@ -1,0 +1,34 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+class Frontend extends MY_Controller
+{
+    function index() {
+        $this->page('index');
+    }
+    
+    function page($page) { 
+        $data = array(
+            'workshop_list' => $this->_getList()
+        );
+        
+        echo '<base href="' . base_url() . '" target="_blank" />';       
+        $this->load->view('frontend/' . $page, $data);
+    }
+    
+    function workshop($id) {
+        $workshop = $this->workshop_model->getById($id);
+        $data = array(
+            'workshop' => $workshop,
+            'workshop_list' => $this->_getList()
+        );
+        
+        echo '<base href="' . base_url() . '" target="_blank" />';       
+        $this->load->view('frontend/workshop', $data);
+    }
+    
+    private function _getList() {
+        $workshops = $this->workshop_model->addWhere('type', 'workshop')->select(); 
+        $classes = $this->workshop_model->addWhere('type', 'cursus')->select();
+        return $this->load->view('frontend/_workshop_list', array('workshops' => $workshops, 'classes' => $classes), true);
+    }
+}

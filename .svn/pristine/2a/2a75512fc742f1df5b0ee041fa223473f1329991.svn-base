@@ -1,0 +1,55 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+    class workshop_model extends MY_Model {
+        function __construct() {
+            $this->name = 'workshop';
+        }
+    }
+    
+    class workshop extends entity {
+        
+        private $name;
+        private $description;
+        
+        function setName($value) {
+            $this->name = $value;
+        }
+        
+        function getName() {
+            return $this->name;
+        }
+        
+        function setDescription($value) {
+            $this->description = $value;
+        }
+        
+        function getDescription() {
+            return $this->description;
+        }
+        
+        function getImages() {
+            $CI = get_instance();
+            return $CI->image_model->addWhere('workshop_id', $this->id)->select();
+        }
+        
+        function getArrayForDatabaseInsert() {
+            return array(
+                'name' => $this->getName(),
+                'description' => $this->getDescription()
+            );
+        }
+        
+        function getArrayForDatabaseUpdate() {
+            return array_merge($this->getArrayForDatabaseInsert(), array(
+            
+            ));
+        }
+        
+        function getArrayForJSON() {
+            return array(
+                'id' => $this->getId(),
+                'name' => $this->getName(),
+                'description' => $this->getDescription()
+            );
+        }
+    }

@@ -1,0 +1,45 @@
+var image_form = Ext.create('Ext.form.Panel', {
+        title: 'Upload een foto',
+        width: 400,
+        bodyPadding: 10,
+        frame: true,
+        renderTo: Ext.getBody(),
+        items: [{
+            xtype: 'filefield',
+            name: 'image',
+            fieldLabel: 'Foto',
+            labelWidth: 50,
+            msgTarget: 'side',
+            allowBlank: false,
+            anchor: '100%',
+            buttonText: 'Selecteer Foto...'
+        }],
+
+        buttons: [{
+            text: 'Upload',
+            handler: function() {
+                var form = this.up('form').getForm();
+                if(form.isValid()){
+                    form.submit({
+                        params: {
+                            workshop_id: image_window.workshop_id    
+                        },
+                        url: site_url + '/admin/post/image',
+                        waitMsg: 'Bezig met uploaden...',
+                        success: function(fp, o) {
+                            Ext.Msg.alert('Succes', 'Uw foto "' + o.result.data.name + '" is opgeslagen.');
+                        }
+                    });
+                }
+            }
+        }]
+    });
+
+    var image_window = Ext.create('Ext.window.Window', {
+        workshop_id: 0,
+        height: 200,
+        width: 400,
+        layout: 'fit',
+        closeAction: 'hide',
+        items: [image_form]
+    });

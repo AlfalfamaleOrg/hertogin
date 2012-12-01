@@ -1,0 +1,285 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/index_template_HOME_def.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/nl_NL/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><link href="css/Plattetekst.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; default_charset = "utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Welkom bij DE HERTOGIN</title>
+<!-- InstanceEndEditable -->
+<meta name="Keywords" content="workshops, cursussen, Tea room, buffet, high tea, thee, lunch, Hilvarenbeek, bakwinkeltje, kado, warme lunchgerechten, expositie, modeltekenen, glas moza?ek, Kadobonnen, openings tijden" />
+<meta name="Description" content="Welkom bij DE HERTOGIN van Hilvarenbeek, Tea Room & More... winkeltjes, workshops, exposities voor beeldende kunstenaars..." />
+<meta name="Author" content="Studio Spider.nl - design@studiospider.nl" /><meta name="robots" content="index, follow"><meta name="revisit-after" content="5 days"><title>Welkom bij DE HERTOGIN van Hilvarenbeek, Tea Room, Buffet & lunches, Workshops, Exposities voor Beeldende kunst...</title>
+<!-- DE HERTOGIN van Hilvarenbeek, winkeltjes, Exposities voor Beeldende kunst, cursussen, Workshops --><cmt>
+<style type="text/css">
+<!--
+body {
+    font: 100% Verdana, Arial, Helvetica, sans-serif;
+    background: #666666;
+    margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+    padding: 0;
+    text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+    color: #000000;
+    background-color: #005791;
+}
+.oneColLiqCtrHdr #container {
+    width: 834px;  /* this will create a container 80% of the browser width */
+    background: #FFFFFF;
+    text-align: left;
+    margin: 0 auto;
+    border-top: 0px none;
+    border-right: 0px none;
+    border-bottom: 0px none;
+    border-left: 0px none;
+}
+.oneColLiqCtrHdr #header {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #FFF;
+    background-color: #FFF;
+    background-image: url(images/hertogin_header_back.jpg);
+    background-repeat: no-repeat;
+    height: 164px;
+    text-align: left;
+    margin: 0px;
+    padding-top: 0;
+    padding-right: 0px;
+    padding-bottom: 0;
+    padding-left: 0px;
+}
+.oneColLiqCtrHdr #header h1 {
+    margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+    padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+.oneColLiqCtrHdr #mainContent {
+    font-size: 10px;
+    padding-top: 0;
+    padding-right: 0px;
+    padding-bottom: 0;
+    padding-left: 20px;
+    background-color: #FFFFFF;
+    background-image: url(images/achtergronden_hertogin_wit.jpg);
+    background-repeat: no-repeat;
+}
+.oneColLiqCtrHdr #footer {
+    background-color: #dda003;
+    border-top: 0px none;
+    border-right: 0px none;
+    border-bottom: 0px none;
+    border-left: 0px none;
+    color: #FFF;
+    padding-top: 0;
+    padding-right: 0px;
+    padding-bottom: 0;
+    padding-left: 20px;
+    width: 814px;
+    height: 40px;
+} 
+.oneColLiqCtrHdr #footer2 {
+    background-color: #E9E2CF;
+    border-top: 0px none;
+    border-right: 0px none;
+    border-bottom: 0px none;
+    border-left: 0px none;
+    color: #FFF;
+    width: 833px;
+    padding-top: 0;
+    padding-right: 0px;
+    padding-bottom: 0;
+    padding-left: 0px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    background-image: url(images/achtergronden_hertogin100oranje.jpg);
+    background-repeat: no-repeat;
+} 
+.oneColLiqCtrHdr #footer p {
+    margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+    padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+    font-size: 9px;
+    color: #FFF;
+}
+.oneColLiqCtrHdr #container #mainContent plat {
+    font-size: 10%;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    color: #999;
+}
+body,td,th {
+    font-size: 11px;
+    color: #085691;
+}
+a:link {
+    color: #666;
+    text-decoration: none;
+}
+a:visited {
+    color: #0C6DA1;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: #666;
+}
+a:active {
+    color: #666;
+}
+.oneColLiqCtrHdr #container #footer .blancotekst {
+    color: #FFF;
+}
+.oneColLiqCtrHdr #container #footer .blancotekst {
+    color: #FFF;
+}
+.oneColLiqCtrHdr #container #footer2 #footer2 #mainContent3 tr table tr td p strong {
+    font-size: 13px;
+}
+-->
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+body,td,th {
+    color: #085691;
+}
+-->
+</style><style type="text/css">
+<!--
+body {
+    background-color: #085691;
+}
+-->
+</style><style type="text/css">
+<!--
+a:visited {
+    color: #085691;
+}
+.oneColLiqCtrHdr #container #mainContent table tr td p .grijs_KLEIN {
+    font-size: 9px;
+}
+-->
+</style><!-- InstanceEndEditable -->
+<link href="css/Plattetekst.css" rel="stylesheet" type="text/css" />
+<link href="css/blanco_link spider.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="oneColLiqCtrHdr">
+<div id="container">
+  <div id="header"><em><img src="images/transparent.gif" width="833" height="67" alt="DE HERTOGIN" /><img src="images/transparent.gif" width="15" height="8" alt="DE HERTOGIN" /></em> <a href="<?php echo site_url('frontend/page/index'); ?>" target="_parent" style="color: #FFF">Home</a> | <a href="<?php echo site_url('frontend/page/index_new'); ?>" target="_parent" style="color: #FFF">Tea Room</a> | <a href="<?php echo site_url('frontend/page/index'); ?>" target="_parent" style="color: #FFF"> </a><a href="<?php echo site_url('frontend/page/index_menu'); ?>" target="_parent" style="color: #FFF">Buffet &amp; lunch</a> | <a href="<?php echo site_url('frontend/page/workshops'); ?>" target="_parent" style="color: #FFF">Workshops &amp; Cursus</a> | <a href="<?php echo site_url('frontend/page/winkeltjes'); ?>" target="_parent" style="color: #FFF">Winkels</a> |<br />
+    <br />
+    <!-- end #header -->
+  </div>
+  <!-- InstanceBeginEditable name="basis" -->
+  <div id="mainContent">&nbsp;
+    <table width="813" height="91" border="0">
+      <tr>
+        <td width="202" align="left" valign="top"><h3><span class="oranje"><em>Lunchgerechten            bij 
+                <br />
+            DE HERTOGIN... </em></span>
+        </h3>
+          <p><span class="oranje">DE HERTOGIN heeft naast 
+            het rijkelijk gevulde High Tea buffet ook een kaart met verschillende verrassende warme dranken en  lunchgerechten zoals  diverse sandwiches, diverse gegrilde panini&rsquo;s, pizzabroodje, diverse pasteitjes, soep, 
+            
+            pancakes 
+            en quiche.</span><span class="platBold"><a href="<?php echo site_url('frontend/page/index_menu'); ?>"><br />
+            <br />
+            </a></span><a href="images/Hertogin_alg_drank_menu_kaart.jpg" target="_blank"><img src="images/Hertogin_alg_drank_menu_kaart_kl.jpg" alt="Klik hier voor de algemene drank en spijzen" width="108" height="159" border="1" /></a><br />
+            <span class="grijs"><a href="<?php echo site_url('frontend/page/index_menu'); ?>" class="grijs_KLEIN">            (Klik op de kaart om onze spijzen en dranken te bekijken)
+</a></span><br />
+          </p>
+          <h3><em><a href="images/kerstsfeerdagen_2011_Els_van_Poppel.jpg" target="_blank"><br />
+            <br />
+            <br />
+            <br />
+            <br />
+<br />
+            <br />
+            </a></em><em>
+            NIEUWE <br />
+            WORKSHOPS / CUSUSSEN:<br />      
+            <a href="Workshop_Cupcake_hangers_maken.html" target="_parent"> <span class="grijs">&middot; Cupcake hangers maken</span><br /></a></em>
+            <a href="Workshop_Bonbons_maken.html" target="_parent"><span class="grijs">&middot; bonbons maken <br /> </a>
+            <a href="Workshop_porselein_schilderen.html" target="_parent"><span class="grijs">&middot; porselein schilderen <br /></a>
+            <a href="Workshop_diorama_maken.html" target="_parent"><span class="grijs">&middot; diorama's maken<br /> </a>
+            <a href="Workshop_Vilten.html" target="_parent"><span class="grijs">&middot; vilten <br /> </a>
+            <a href="Workshop_Tekenen.html" target="_parent"><span class="grijs">&middot; tekenen <br />  </a>
+            <a href="Workshop_Modeltekenen.html" target="_parent"><span class="grijs">&middot; modeltekenen <br /> </a>
+            <a href="Workshop_A_Aalen_mozaiek.html" target="_parent"><span class="grijs">&middot; Glasmoza&iuml;ek <br /> </a>
+            <a href="Workshop_M_Schraven_Huidverzorging.html" target="_parent"><span class="grijs">&middot; Huidverzorging</a>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <em><a href="images/hertogin_kadobon_10.jpg" target="_blank"><img src="images/hertogin_kadobon.jpg" alt="Hertogin_kadobon" width="112" height="59" border="1" /></a></em></em><a href="0"><em><em><br />
+            </em></em></a><em><em><span class="platBold"><em>Een leuk kado-idee?</em></span></em></em><a href="images/hertogin_kadobon_10.jpg" target="_blank">...Kadobonnen</a><em><em><br />
+            Bij DE HERTOGIN
+                      
+            te verkrijgen: 
+            KADOBONNEN om vrij 
+            te 
+            besteden, van &euro;5,- 
+                      en &euro;10,-  (<em>ook voor workshops</em>) en kadobonnen 
+                      voor 
+                      High Tea's!</em></em><em><br />
+                      </em><a href="<?php echo site_url('frontend/page/index_new'); ?>" target="_parent"><br />
+        </a></em></h3></td>
+        <td width="285" align="center" valign="top"><h2><span class="grijs"><em><img src="images/transparent.gif" width="285" height="148" alt="DE HERTOGIN" /></em><br />
+          Welkom bij</span> <span class="oranje">DE HERTOGIN</span></h2>
+          <h2>&quot;Ons terras is geopend. <br />
+          Met de hele dag zon en een prachtig uitzicht op de kerktoren van Hilvarenbeek&quot; </h2>
+          <h3><br />
+            <em><img src="images/transparent.gif" width="285" height="158" alt="DE HERTOGIN" /><br />
+            </em><em><em><img src="images/terras_de_hertogin_hilvarenbeek.jpg" width="285" height="199" alt="terras de hertogin hilvarenbeek" /><br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h3> Like ons op Facebook: </h3> 
+            <div class="fb-like" data-href="http://www.facebook.com/dehertogin" data-send="false" data-width="285" data-show-faces="true"></div>  
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </em></em></h3></td>
+        <td width="312" align="left" valign="top"><em>Tea Room &amp; Winkels<br />
+          openings tijden:          Di. - Za. 9.30 - 17.30 uur<br />
+          <span class="grijs"><span class="Plat"><br />
+          DE HERTOGIN<br />
+          Gelderstraat 8-10 | 5081 AC Hilvarenbeek</span></span><br />
+          <span class="lat reg "><span class="Plat">M. 06-21532421</span></span><span class="Plat"> | </span><a href="mailto:info@dehertoginvanhilvarenbeek.nl"> info@dehertoginvanhilvarenbeek.nl</a><br /> 
+          <img src="images/transparent.gif" width="311" height="62" alt="DE HERTOGIN" /><img src="images/transparent.gif" width="82" height="230" alt="DE HERTOGIN" /><a href="<?php echo site_url('frontend/page/index_new'); ?>"><img src="images/kastje_home.png" alt="DE HERTOGIN" width="151" height="208" border="0" align="top" /><br />
+          </a><img src="images/transparent.gif" width="312" height="633" alt="DE HERTOGIN" /><a href="<?php echo site_url('frontend/page/index_new'); ?>">          </a></em></td>
+      </tr>
+    </table>
+<br />
+ <br /> 
+  </div>
+  <!-- InstanceEndEditable -->
+  <!-- end #container -->
+  <div class="blancotekst" id="footer"><br />
+  Copyright 2011 - DE HERTOGIN - webdesign: <a href="http://www.studiospider.nl" target="_blank" class="grijs">STUDIO SPIDER</a></div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,39 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+    class leader_model extends MY_Model {
+        function __construct() {
+            $this->name = 'leader';
+        }
+    }
+    
+    class leader extends entity {
+        
+        private $name;
+        
+        function setName($value) {
+            $this->name = $value;
+        }
+        
+        function getName() {
+            return $this->name;
+        }
+        
+        function getArrayForDatabaseInsert() {
+            return array(
+                'name' => $this->getName()
+            );
+        }
+        
+        function getArrayForDatabaseUpdate() {
+            return array_merge($this->getArrayForDatabaseInsert(), array(
+            
+            ));
+        }
+        
+        function getArrayForJSON() {
+            return array(
+                'id' => $this->getId(),
+                'name' => $this->getName()
+            );
+        }
+    }

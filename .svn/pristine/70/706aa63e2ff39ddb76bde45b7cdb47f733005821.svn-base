@@ -1,0 +1,90 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+    class image_model extends MY_Model {
+        function __construct() {
+            $this->name = 'image';
+        }
+        
+        function selectAll() {
+            $workshop_id = $this->input->get('workshop_id');
+            return $this->addWhere('workshop_id', $workshop_id)->select();
+        }
+        
+        function create($image) {
+            $image->setId(parent::create($image));
+            $image->setName($_FILES["image"]["name"]);
+            $image->setLocation("data/uploads/workshop_images/" . $image->getId() . '_' . $image->getName());
+            move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . '/hertogin/' . $image->getLocation());
+            
+            $this->update($image);  
+            
+            return $image;
+        }
+        
+        function delete() {
+            $location = $this->input->get('location');
+            $image = $this->addWhere('location', $location)->get();
+            
+            parent::delete($image);
+            
+            unlink($_SERVER['DOCUMENT_ROOT'] . '/hertogin/' . $location);
+        }
+    }
+    
+    class image extends entity {
+        
+        private $name;
+        private $location;
+        private $workshop_id;
+        
+        function setName($value) {
+            $this->name = $value;
+        }
+        
+        function getName() {
+            if (!$this->name) {
+                $this->name = $_FILES['image']['name'];
+            }
+            
+            return $this->name;
+        }
+        
+        function setLocation($value) {
+            $this->location = $value;
+        }
+        
+        function getLocation() {
+            return $this->location;
+        }
+        
+        function setWorkshop_id($value) {
+            $this->workshop_id = $value;
+        }
+        
+        function getWorkshop_id() {
+            return $this->workshop_id;
+        }
+        
+        function getArrayForDatabaseInsert() {
+            return array(
+                'name' => $this->getName(),
+                'workshop_id' => $this->getWorkshop_id()
+            );
+        }
+        
+        function getArrayForDatabaseUpdate() {
+            return array_merge($this->getArrayForDatabaseInsert(), array(
+                'location' => $this->getLocation()
+            ));
+        }
+        
+        function getArrayForJSON() {
+            return array(
+                'id' => $this->getId(),
+                'name' => $this->getName(),
+                'location' => $this->getLocation(),
+                'workshop_id' => $this->getWorkshop_id()
+            );
+        }
+    }
+

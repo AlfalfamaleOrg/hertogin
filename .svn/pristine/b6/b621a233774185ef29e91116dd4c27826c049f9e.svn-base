@@ -1,0 +1,41 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+    class booking_model extends MY_Model {
+       function __construct() {
+            $this->name = 'booking';
+        }
+    }
+    
+    class booking extends entity {
+        
+        private $start;
+        private $end;
+        private $room_id;
+        private $workshop_id;
+        private $leader_id;
+        private $booking_status_id;
+        
+        function setStart($value) {
+            $this->start = $value;
+        }
+        
+        function setEnd($value) {
+            $this->end = $value;
+        }
+        
+        function setRoom_id($value) {
+            $this->room_id = $value;
+        }
+        
+        function setWorkshop_id($value) {
+            $this->workshop_id = $value;
+        }
+        
+        function setLeader_id($value) {
+            $this->leader_id = $value;
+        }
+        
+        function setBooking_status_id($value) {
+            $this->booking_status_id = $value;
+        }
+    }

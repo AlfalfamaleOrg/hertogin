@@ -1,0 +1,64 @@
+var preWork;
+
+Ext.onReady(function(){
+    Ext.define('workshop', {
+        extend: 'Ext.data.Model',
+        fields: [
+            {name: 'id',  type: 'int'},
+            {name: 'name',   type: 'string'},
+            {name: 'description',   type: 'string'}
+        ]
+    });
+    
+    preWork = function() {
+        this.name = 'workshop';
+        
+        this.setRecord = function() {
+            Ext.getCmp('image_button').enable();
+            Ext.getCmp('leader_button').enable();
+        };
+        
+        this.resetForm = function() {
+            Ext.getCmp('image_button').disable();
+            Ext.getCmp('leader_button').disable();
+        };
+        
+        this.buttons = [{
+           text: 'Afbeeldingen',
+           id: 'image_button',
+           disabled: true,
+            //icon: 'images/icons/disk.png',
+            handler: function() {
+                image_window.workshop_id = this.up('form').activeRecord.data.id;
+                image_window.show();
+            } 
+        },{
+           text: 'Leiders',
+           id: 'leader_button',
+           disabled: true,
+            //icon: 'images/icons/disk.png',
+            handler: function() {
+                leader_window.workshop_id = this.up('form').activeRecord.data.id;
+                leader_window.show();
+            } 
+        }];
+        
+        this.formItems = [{
+            fieldLabel: 'Id',
+            name: 'id',
+            allowBlank: true,
+            disabled: true,
+            hidden: true
+        },{
+            fieldLabel: 'Naam',
+            name: 'name',
+            allowBlank: false
+        },{
+            fieldLabel: 'Beschrijving',
+            name: 'description',
+            allowBlank: true,
+            xtype: 'htmleditor',
+            height: 300
+        }]
+    }
+});

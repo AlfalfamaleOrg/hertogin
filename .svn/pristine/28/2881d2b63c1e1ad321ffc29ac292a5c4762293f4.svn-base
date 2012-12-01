@@ -1,0 +1,9 @@
+AuthUserFile C:/php/.htpasswd
+#AuthUserFile /home/id00008/domains/robvandenhout.eu/public_html/hertogin/.htpasswd
+AuthName "Login op Hertogin test omgeving"
+AuthType Basic
+
+<Limit GET POST>
+require valid-user
+</Limit>
+

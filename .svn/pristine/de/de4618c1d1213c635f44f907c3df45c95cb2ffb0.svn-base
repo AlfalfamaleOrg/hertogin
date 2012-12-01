@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.Plat {
+	color: #666;
+}
+.oranje {
+	color: #E49F26;
+}
+.grijs {
+	color: #666;
+}
+.platBold {
+	font-weight: bold;
+	color: #666;
+}

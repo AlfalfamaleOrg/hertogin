@@ -1,0 +1,147 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+    class workshop_model extends MY_Model {
+        
+        function __construct() {
+            $this->name = 'workshop';
+        }
+        
+        function getLeaders($workshop) {
+            $linked_leaders = $this->db->select('leader.*')
+                ->from('leader')
+                ->join('workshop_leader', 'leader.id = workshop_leader.leader_id', 'inner')
+                ->where('workshop_leader.workshop_id', $workshop->getId())
+                ->get()->result('leader');
+            return $linked_leaders;
+        }
+    }
+    
+    class workshop extends entity {
+        
+        private $name;
+        private $intro_text;
+        private $description_text;
+        private $workshop_text;
+        private $price_text;
+        private $duration_text;
+        private $attendees_text;
+        private $contact_text;
+        private $type;
+        
+        function setName($value) {
+            $this->name = $value;
+        }
+        
+        function getName() {
+            return $this->name;
+        }
+        
+        function setDescription_text($value) {
+            $this->description_text = $value;
+        }
+        
+        function getDescription_text() {
+            return $this->description_text;
+        }
+        
+        function setIntro_text($value) {
+            $this->intro_text = $value;
+        }
+        
+        function getIntro_text() {
+            return $this->intro_text;
+        }
+        
+        function setWorkshop_text($value) {
+            $this->workshop_text = $value;
+        }
+        
+        function getWorkshop_text() {
+            return $this->workshop_text;
+        }
+        
+        function setPrice_text($value) {
+            $this->price_text = $value;
+        }
+        
+        function getPrice_text() {
+            return $this->price_text;
+        }
+        
+        function setDuration_text($value) {
+            $this->duration_text = $value;
+        }
+        
+        function getDuration_text() {
+            return $this->duration_text;
+        }
+        
+        function setAttendees_text($value) {
+            $this->attendees_text = $value;
+        }
+        
+        function getAttendees_text() {
+            return $this->attendees_text;
+        }
+        
+        function setContact_text($value) {
+            $this->contact_text = $value;
+        }
+        
+        function getContact_text() {
+            return $this->contact_text;
+        }  
+        
+        function getType() {
+            return $this->type;
+        }
+        
+        function setType($value) {
+            $this->type = $value;
+        }
+        
+        function getImages() {
+            $CI = get_instance();
+            return $CI->image_model->addWhere('workshop_id', $this->id)->select();
+        }
+        
+        function getLeaders() {
+            $CI = get_instance();
+            return $CI->workshop_model->getLeaders($this);
+        }
+        
+        function getArrayForDatabaseInsert() {
+            return array(
+                'name' => $this->getName(),
+                'description_text' => $this->getDescription_text(),
+                'intro_text' => $this->getIntro_text(),
+                'workshop_text' => $this->getWorkshop_text(),
+                'duration_text' => $this->getDuration_text(),
+                'price_text' => $this->getPrice_text(),
+                'attendees_text' => $this->getAttendees_text(),
+                'contact_text' => $this->getContact_text(),
+                'type' => $this->getType() 
+            );
+        }
+        
+        function getArrayForDatabaseUpdate() {
+            return array_merge($this->getArrayForDatabaseInsert(), array(
+            
+            ));
+        }
+        
+        function getArrayForJSON() {
+            return array(
+                'id' => $this->getId(),
+                'name' => $this->getName(),
+                'description_text' => $this->getDescription_text(),
+                'intro_text' => $this->getDescription_text(),
+                'workshop_text' => $this->getDescription_text(),
+                'duration_text' => $this->getDescription_text(),
+                'price_text' => $this->getDescription_text(),
+                'attendees_text' => $this->getDescription_text(),
+                'contact_text' => $this->getDescription_text(),
+                'type' => $this->getType()                 
+            );
+        }
+    }

@@ -1,0 +1,290 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
+
+DEBUG - 19-06-2012 15:31:49 --> Config Class Initialized
+DEBUG - 19-06-2012 15:31:49 --> Hooks Class Initialized
+DEBUG - 19-06-2012 15:31:49 --> Utf8 Class Initialized
+DEBUG - 19-06-2012 15:31:49 --> UTF-8 Support Enabled
+DEBUG - 19-06-2012 15:31:49 --> URI Class Initialized
+DEBUG - 19-06-2012 15:31:49 --> Router Class Initialized
+DEBUG - 19-06-2012 15:31:49 --> Output Class Initialized
+DEBUG - 19-06-2012 15:31:49 --> Security Class Initialized
+DEBUG - 19-06-2012 15:31:49 --> Input Class Initialized
+DEBUG - 19-06-2012 15:31:49 --> Global POST and COOKIE data sanitized
+DEBUG - 19-06-2012 15:31:49 --> Language Class Initialized
+DEBUG - 19-06-2012 15:31:50 --> Loader Class Initialized
+DEBUG - 19-06-2012 15:31:50 --> Helper loaded: form_helper
+DEBUG - 19-06-2012 15:31:50 --> Helper loaded: url_helper
+DEBUG - 19-06-2012 15:31:50 --> Helper loaded: output_helper
+DEBUG - 19-06-2012 15:31:50 --> Helper loaded: input_helper
+DEBUG - 19-06-2012 15:31:50 --> Language file loaded: language/english/tank_auth_lang.php
+DEBUG - 19-06-2012 15:31:50 --> Form Validation Class Initialized
+DEBUG - 19-06-2012 15:31:50 --> Config file loaded: application/config/tank_auth.php
+DEBUG - 19-06-2012 15:31:50 --> Session Class Initialized
+DEBUG - 19-06-2012 15:31:50 --> Helper loaded: string_helper
+DEBUG - 19-06-2012 15:31:51 --> Database Driver Class Initialized
+ERROR - 19-06-2012 15:31:51 --> Severity: Notice  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+ D:\wamp\www\Hertogin\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 19-06-2012 15:31:51 --> A session cookie was not found.
+DEBUG - 19-06-2012 15:31:51 --> Session routines successfully run
+DEBUG - 19-06-2012 15:31:51 --> Model Class Initialized
+DEBUG - 19-06-2012 15:31:51 --> Model Class Initialized
+DEBUG - 19-06-2012 15:31:52 --> Helper loaded: cookie_helper
+DEBUG - 19-06-2012 15:31:52 --> XSS Filtering completed
+DEBUG - 19-06-2012 15:31:52 --> Model Class Initialized
+DEBUG - 19-06-2012 15:31:52 --> Migrations class initialized
+DEBUG - 19-06-2012 15:31:52 --> Language file loaded: language/english/migration_lang.php
+DEBUG - 19-06-2012 15:31:52 --> Database Forge Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Controller Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Current migration: 4
+DEBUG - 19-06-2012 15:31:53 --> File loaded: application/views/admin.php
+DEBUG - 19-06-2012 15:31:53 --> Final output sent to browser
+DEBUG - 19-06-2012 15:31:53 --> Total execution time: 4.1338
+DEBUG - 19-06-2012 15:31:53 --> Config Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Hooks Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Utf8 Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> UTF-8 Support Enabled
+DEBUG - 19-06-2012 15:31:53 --> URI Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Router Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Output Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Security Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Input Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Global POST and COOKIE data sanitized
+DEBUG - 19-06-2012 15:31:53 --> Language Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Loader Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Helper loaded: form_helper
+DEBUG - 19-06-2012 15:31:53 --> Helper loaded: url_helper
+DEBUG - 19-06-2012 15:31:53 --> Helper loaded: output_helper
+DEBUG - 19-06-2012 15:31:53 --> Helper loaded: input_helper
+DEBUG - 19-06-2012 15:31:53 --> Language file loaded: language/english/tank_auth_lang.php
+DEBUG - 19-06-2012 15:31:53 --> Form Validation Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Config file loaded: application/config/tank_auth.php
+DEBUG - 19-06-2012 15:31:53 --> Session Class Initialized
+DEBUG - 19-06-2012 15:31:53 --> Helper loaded: string_helper
+DEBUG - 19-06-2012 15:31:53 --> Database Driver Class Initialized
+ERROR - 19-06-2012 15:31:53 --> Severity: Notice  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+ D:\wamp\www\Hertogin\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 19-06-2012 15:31:54 --> Session routines successfully run
+DEBUG - 19-06-2012 15:31:54 --> Model Class Initialized
+DEBUG - 19-06-2012 15:31:54 --> Model Class Initialized
+DEBUG - 19-06-2012 15:31:54 --> Migrations class initialized
+DEBUG - 19-06-2012 15:31:54 --> Language file loaded: language/english/migration_lang.php
+DEBUG - 19-06-2012 15:31:54 --> Database Forge Class Initialized
+DEBUG - 19-06-2012 15:31:54 --> Controller Class Initialized
+DEBUG - 19-06-2012 15:31:54 --> Current migration: 4
+DEBUG - 19-06-2012 15:31:54 --> File loaded: application/views/backend/image_window.js
+DEBUG - 19-06-2012 15:31:54 --> File loaded: application/views/backend/leader_window.js
+DEBUG - 19-06-2012 15:31:54 --> File loaded: application/views/backend/workshop.js
+DEBUG - 19-06-2012 15:31:54 --> File loaded: application/views/admin.js
+DEBUG - 19-06-2012 15:31:54 --> Final output sent to browser
+DEBUG - 19-06-2012 15:31:54 --> Total execution time: 0.8172
+DEBUG - 19-06-2012 15:32:39 --> Config Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Hooks Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Utf8 Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> UTF-8 Support Enabled
+DEBUG - 19-06-2012 15:32:39 --> URI Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Router Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Output Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Security Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Input Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Global POST and COOKIE data sanitized
+DEBUG - 19-06-2012 15:32:39 --> Language Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Loader Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Helper loaded: form_helper
+DEBUG - 19-06-2012 15:32:39 --> Helper loaded: url_helper
+DEBUG - 19-06-2012 15:32:39 --> Helper loaded: output_helper
+DEBUG - 19-06-2012 15:32:39 --> Helper loaded: input_helper
+DEBUG - 19-06-2012 15:32:39 --> Language file loaded: language/english/tank_auth_lang.php
+DEBUG - 19-06-2012 15:32:39 --> Form Validation Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Config file loaded: application/config/tank_auth.php
+DEBUG - 19-06-2012 15:32:39 --> Session Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Helper loaded: string_helper
+DEBUG - 19-06-2012 15:32:39 --> Database Driver Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Session routines successfully run
+DEBUG - 19-06-2012 15:32:39 --> Model Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Model Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Migrations class initialized
+DEBUG - 19-06-2012 15:32:39 --> Language file loaded: language/english/migration_lang.php
+DEBUG - 19-06-2012 15:32:39 --> Database Forge Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Controller Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Current migration: 4
+DEBUG - 19-06-2012 15:32:39 --> File loaded: application/views/admin.php
+DEBUG - 19-06-2012 15:32:39 --> Final output sent to browser
+DEBUG - 19-06-2012 15:32:39 --> Total execution time: 0.2488
+DEBUG - 19-06-2012 15:32:39 --> Config Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Hooks Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Utf8 Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> UTF-8 Support Enabled
+DEBUG - 19-06-2012 15:32:39 --> URI Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Router Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Output Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Security Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Input Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Global POST and COOKIE data sanitized
+DEBUG - 19-06-2012 15:32:39 --> Language Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Loader Class Initialized
+DEBUG - 19-06-2012 15:32:39 --> Helper loaded: form_helper
+DEBUG - 19-06-2012 15:32:39 --> Helper loaded: url_helper
+DEBUG - 19-06-2012 15:32:39 --> Helper loaded: output_helper
+DEBUG - 19-06-2012 15:32:40 --> Helper loaded: input_helper
+DEBUG - 19-06-2012 15:32:40 --> Language file loaded: language/english/tank_auth_lang.php
+DEBUG - 19-06-2012 15:32:40 --> Form Validation Class Initialized
+DEBUG - 19-06-2012 15:32:40 --> Config file loaded: application/config/tank_auth.php
+DEBUG - 19-06-2012 15:32:40 --> Session Class Initialized
+DEBUG - 19-06-2012 15:32:40 --> Helper loaded: string_helper
+DEBUG - 19-06-2012 15:32:40 --> Database Driver Class Initialized
+ERROR - 19-06-2012 15:32:40 --> Severity: Notice  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+ D:\wamp\www\Hertogin\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 19-06-2012 15:32:40 --> Session routines successfully run
+DEBUG - 19-06-2012 15:32:40 --> Model Class Initialized
+DEBUG - 19-06-2012 15:32:40 --> Model Class Initialized
+DEBUG - 19-06-2012 15:32:40 --> Migrations class initialized
+DEBUG - 19-06-2012 15:32:40 --> Language file loaded: language/english/migration_lang.php
+DEBUG - 19-06-2012 15:32:40 --> Database Forge Class Initialized
+DEBUG - 19-06-2012 15:32:40 --> Controller Class Initialized
+DEBUG - 19-06-2012 15:32:40 --> Current migration: 4
+DEBUG - 19-06-2012 15:32:40 --> File loaded: application/views/backend/image_window.js
+DEBUG - 19-06-2012 15:32:40 --> File loaded: application/views/backend/leader_window.js
+DEBUG - 19-06-2012 15:32:40 --> File loaded: application/views/backend/workshop.js
+DEBUG - 19-06-2012 15:32:40 --> File loaded: application/views/admin.js
+DEBUG - 19-06-2012 15:32:40 --> Final output sent to browser
+DEBUG - 19-06-2012 15:32:40 --> Total execution time: 0.4414
+DEBUG - 19-06-2012 15:33:15 --> Config Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Hooks Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Utf8 Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> UTF-8 Support Enabled
+DEBUG - 19-06-2012 15:33:15 --> URI Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Router Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Output Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Security Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Input Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Global POST and COOKIE data sanitized
+DEBUG - 19-06-2012 15:33:15 --> Language Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Loader Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Helper loaded: form_helper
+DEBUG - 19-06-2012 15:33:15 --> Helper loaded: url_helper
+DEBUG - 19-06-2012 15:33:15 --> Helper loaded: output_helper
+DEBUG - 19-06-2012 15:33:15 --> Helper loaded: input_helper
+DEBUG - 19-06-2012 15:33:15 --> Language file loaded: language/english/tank_auth_lang.php
+DEBUG - 19-06-2012 15:33:15 --> Form Validation Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Config file loaded: application/config/tank_auth.php
+DEBUG - 19-06-2012 15:33:15 --> Session Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Helper loaded: string_helper
+DEBUG - 19-06-2012 15:33:15 --> Database Driver Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Session routines successfully run
+DEBUG - 19-06-2012 15:33:15 --> Model Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Model Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Migrations class initialized
+DEBUG - 19-06-2012 15:33:15 --> Language file loaded: language/english/migration_lang.php
+DEBUG - 19-06-2012 15:33:15 --> Database Forge Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Controller Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Current migration: 4
+DEBUG - 19-06-2012 15:33:15 --> File loaded: application/views/admin.php
+DEBUG - 19-06-2012 15:33:15 --> Final output sent to browser
+DEBUG - 19-06-2012 15:33:15 --> Total execution time: 0.2317
+DEBUG - 19-06-2012 15:33:15 --> Config Class Initialized
+DEBUG - 19-06-2012 15:33:15 --> Hooks Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Utf8 Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> UTF-8 Support Enabled
+DEBUG - 19-06-2012 15:33:16 --> URI Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Router Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Output Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Security Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Input Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Global POST and COOKIE data sanitized
+DEBUG - 19-06-2012 15:33:16 --> Language Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Loader Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Helper loaded: form_helper
+DEBUG - 19-06-2012 15:33:16 --> Helper loaded: url_helper
+DEBUG - 19-06-2012 15:33:16 --> Helper loaded: output_helper
+DEBUG - 19-06-2012 15:33:16 --> Helper loaded: input_helper
+DEBUG - 19-06-2012 15:33:16 --> Language file loaded: language/english/tank_auth_lang.php
+DEBUG - 19-06-2012 15:33:16 --> Form Validation Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Config file loaded: application/config/tank_auth.php
+DEBUG - 19-06-2012 15:33:16 --> Session Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Helper loaded: string_helper
+DEBUG - 19-06-2012 15:33:16 --> Database Driver Class Initialized
+ERROR - 19-06-2012 15:33:16 --> Severity: Notice  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+ D:\wamp\www\Hertogin\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 19-06-2012 15:33:16 --> Session routines successfully run
+DEBUG - 19-06-2012 15:33:16 --> Model Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Model Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Migrations class initialized
+DEBUG - 19-06-2012 15:33:16 --> Language file loaded: language/english/migration_lang.php
+DEBUG - 19-06-2012 15:33:16 --> Database Forge Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Controller Class Initialized
+DEBUG - 19-06-2012 15:33:16 --> Current migration: 4
+DEBUG - 19-06-2012 15:33:16 --> File loaded: application/views/backend/image_window.js
+DEBUG - 19-06-2012 15:33:16 --> File loaded: application/views/backend/leader_window.js
+DEBUG - 19-06-2012 15:33:16 --> File loaded: application/views/backend/workshop.js
+DEBUG - 19-06-2012 15:33:16 --> File loaded: application/views/admin.js
+DEBUG - 19-06-2012 15:33:16 --> Final output sent to browser
+DEBUG - 19-06-2012 15:33:16 --> Total execution time: 0.3531
+DEBUG - 19-06-2012 15:33:40 --> Config Class Initialized
+DEBUG - 19-06-2012 15:33:40 --> Hooks Class Initialized
+DEBUG - 19-06-2012 15:33:40 --> Utf8 Class Initialized
+DEBUG - 19-06-2012 15:33:40 --> UTF-8 Support Enabled
+DEBUG - 19-06-2012 15:33:40 --> URI Class Initialized
+DEBUG - 19-06-2012 15:33:40 --> Router Class Initialized
+DEBUG - 19-06-2012 15:33:40 --> Output Class Initialized
+DEBUG - 19-06-2012 15:33:40 --> Security Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Input Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Global POST and COOKIE data sanitized
+DEBUG - 19-06-2012 15:33:41 --> Language Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Loader Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Helper loaded: form_helper
+DEBUG - 19-06-2012 15:33:41 --> Helper loaded: url_helper
+DEBUG - 19-06-2012 15:33:41 --> Helper loaded: output_helper
+DEBUG - 19-06-2012 15:33:41 --> Helper loaded: input_helper
+DEBUG - 19-06-2012 15:33:41 --> Language file loaded: language/english/tank_auth_lang.php
+DEBUG - 19-06-2012 15:33:41 --> Form Validation Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Config file loaded: application/config/tank_auth.php
+DEBUG - 19-06-2012 15:33:41 --> Session Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Helper loaded: string_helper
+DEBUG - 19-06-2012 15:33:41 --> Database Driver Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Session routines successfully run
+DEBUG - 19-06-2012 15:33:41 --> Model Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Model Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Migrations class initialized
+DEBUG - 19-06-2012 15:33:41 --> Language file loaded: language/english/migration_lang.php
+DEBUG - 19-06-2012 15:33:41 --> Database Forge Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Controller Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Current migration: 4
+DEBUG - 19-06-2012 15:33:41 --> File loaded: application/views/admin.php
+DEBUG - 19-06-2012 15:33:41 --> Final output sent to browser
+DEBUG - 19-06-2012 15:33:41 --> Total execution time: 0.2365
+DEBUG - 19-06-2012 15:33:41 --> Config Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Hooks Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Utf8 Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> UTF-8 Support Enabled
+DEBUG - 19-06-2012 15:33:41 --> URI Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Router Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Output Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Security Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Input Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Global POST and COOKIE data sanitized
+DEBUG - 19-06-2012 15:33:41 --> Language Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Loader Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Helper loaded: form_helper
+DEBUG - 19-06-2012 15:33:41 --> Helper loaded: url_helper
+DEBUG - 19-06-2012 15:33:41 --> Helper loaded: output_helper
+DEBUG - 19-06-2012 15:33:41 --> Helper loaded: input_helper
+DEBUG - 19-06-2012 15:33:41 --> Language file loaded: language/english/tank_auth_lang.php
+DEBUG - 19-06-2012 15:33:41 --> Form Validation Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Config file loaded: application/config/tank_auth.php
+DEBUG - 19-06-2012 15:33:41 --> Session Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Helper loaded: string_helper
+DEBUG - 19-06-2012 15:33:41 --> Database Driver Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Session routines successfully run
+DEBUG - 19-06-2012 15:33:41 --> Model Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Model Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Migrations class initialized
+DEBUG - 19-06-2012 15:33:41 --> Language file loaded: language/english/migration_lang.php
+DEBUG - 19-06-2012 15:33:41 --> Database Forge Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Controller Class Initialized
+DEBUG - 19-06-2012 15:33:41 --> Current migration: 4
+DEBUG - 19-06-2012 15:33:41 --> File loaded: application/views/backend/image_window.js
+DEBUG - 19-06-2012 15:33:41 --> File loaded: application/views/backend/leader_window.js
+DEBUG - 19-06-2012 15:33:41 --> File loaded: application/views/backend/workshop.js
+DEBUG - 19-06-2012 15:33:41 --> File loaded: application/views/admin.js
+DEBUG - 19-06-2012 15:33:41 --> Final output sent to browser
+DEBUG - 19-06-2012 15:33:41 --> Total execution time: 0.3630

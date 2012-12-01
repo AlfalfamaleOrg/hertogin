@@ -1,0 +1,174 @@
+var leader_window;
+
+Ext.require([
+    'Ext.grid.*',
+    'Ext.data.*',
+    'Ext.dd.*'
+]);
+
+Ext.define('DataObject', {
+    extend: 'Ext.data.Model',
+    fields: ['id', 'name']
+});
+var firstGridStore;
+var secondGridStore;
+Ext.onReady(function(){
+
+    // create the data store
+    firstGridStore = Ext.create('Ext.data.Store', {
+        model: 'DataObject',
+        proxy: {
+            type: 'ajax',
+            url: site_url + '/admin/read/leader',
+            reader: {
+                type: 'json',
+                root: 'data'
+            },
+            writer: {
+                type: 'json',
+                writeAllFields: true,
+                root: 'data'
+            },
+        }
+    });
+
+
+    // Column Model shortcut array
+    var columns = [
+        {text: "Naam", flex: 1, sortable: true, dataIndex: 'name'}
+    ];
+
+    // declare the source Grid
+    var firstGrid = Ext.create('Ext.grid.Panel', {
+        viewConfig: {
+            plugins: {
+                ptype: 'gridviewdragdrop',
+                dragGroup: 'firstGridDDGroup',
+                dropGroup: 'secondGridDDGroup'
+            },
+            listeners: {
+                drop: function(node, data, dropRec, dropPosition) {
+                    Ext.Ajax.request({
+                        url: site_url + '/admin/action/leader/unlink_workshop',
+                        params: {
+                            leader_id: data.records[0].data.id,
+                            workshop_id: leader_window.workshop_id
+                        }
+                    });
+                }
+            }
+        },
+        store            : firstGridStore,
+        columns          : columns,
+        stripeRows       : true,
+        title            : 'Beschikbaar',
+        margins          : '0 2 0 0'
+    });
+
+    secondGridStore = Ext.create('Ext.data.Store', {
+        model: 'DataObject',
+        proxy: {
+            type: 'ajax',
+            url: site_url + '/admin/read/leader',
+            reader: {
+                type: 'json',
+                root: 'data'
+            },
+            writer: {
+                type: 'json',
+                writeAllFields: true,
+                root: 'data'
+            }
+        }
+    });
+
+    // create the destination Grid
+    var secondGrid = Ext.create('Ext.grid.Panel', {
+        viewConfig: {
+            plugins: {
+                ptype: 'gridviewdragdrop',
+                dragGroup: 'secondGridDDGroup',
+                dropGroup: 'firstGridDDGroup'
+            },
+            listeners: {
+                drop: function(node, data, dropRec, dropPosition) {
+                    Ext.Ajax.request({
+                        url: site_url + '/admin/action/leader/link_workshop',
+                        params: {
+                            leader_id: data.records[0].data.id,
+                            workshop_id: leader_window.workshop_id
+                        }
+                    });
+                }
+            }
+        },
+        store            : secondGridStore,
+        columns          : columns,
+        stripeRows       : true,
+        title            : 'Gekoppeld',
+        margins          : '0 0 0 3'
+    });
+
+    //Simple 'border layout' panel to house both grids
+    var displayPanel = Ext.create('Ext.Panel', {
+        width        : 650,
+        height       : 300,
+        layout       : {
+            type: 'hbox',
+            align: 'stretch',
+            padding: 5
+        },
+        defaults     : { flex : 1 }, //auto stretch
+        items        : [
+            firstGrid,
+            secondGrid
+        ],
+        dockedItems: {
+            xtype: 'toolbar',
+            dock: 'bottom',
+            items: ['->', // Fill
+            {
+                text: 'Reload',
+                handler: function(){
+                    firstGridStore.load({
+                    params: {
+                        workshop_id: leader_window.workshop_id,
+                        which: 'available'
+                    }
+                    });
+                    secondGridStore.load({
+                        params: {
+                            workshop_id: leader_window.workshop_id,
+                            which: 'linked'
+                        }
+                    });
+                }
+            }]
+        }
+    });
+    
+    leader_window = Ext.create('Ext.window.Window', {
+        workshop_id: 0,
+        height: 500,
+        width: 500,
+        title: 'Leiders',
+        layout: 'fit',
+        items: [displayPanel],
+        listeners: {
+            show: function() {
+                firstGridStore.load({
+                    params: {
+                        workshop_id: leader_window.workshop_id,
+                        which: 'available'
+                    }
+                });
+                secondGridStore.load({
+                    params: {
+                        workshop_id: leader_window.workshop_id,
+                        which: 'linked'
+                    }
+                });
+            }
+        }
+    });
+});

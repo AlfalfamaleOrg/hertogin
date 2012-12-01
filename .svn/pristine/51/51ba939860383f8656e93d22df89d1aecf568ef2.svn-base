@@ -1,0 +1,83 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+    class leader_model extends MY_Model {
+        function __construct() {
+            $this->name = 'leader';
+        }
+        
+        function link_workshop() {
+            $workshop_id = $this->input->post('workshop_id');
+            $leader_id = $this->input->post('leader_id');
+            $data = array(
+               'workshop_id' => $workshop_id,
+               'leader_id' => $leader_id
+            );
+            $this->db->insert('workshop_leader', $data); 
+            echo $this->db->last_query();
+        }
+        
+        function unlink_workshop() {
+            $workshop_id = $this->input->post('workshop_id');
+            $leader_id = $this->input->post('leader_id');
+            $this->db->where('workshop_id', $workshop_id)
+                ->where('leader_id', $leader_id)
+                ->delete('workshop_leader');
+            echo $this->db->last_query();
+        }
+        
+        function selectAll() {
+            $which = $this->input->get('which');
+            $workshop_id = $this->input->get('workshop_id');
+            
+            if ($which == 'linked') {
+                $linked_leaders = $this->db->select('leader.*')
+                    ->from('leader')
+                    ->join('workshop_leader', 'leader.id = workshop_leader.leader_id', 'inner')
+                    ->where('workshop_leader.workshop_id', $workshop_id)
+                    ->get()->result('leader');
+                return $linked_leaders;
+            } else if ($which == 'available') {
+                $available_leaders = $this->db->select('leader.*')
+                    ->from('leader')
+                    ->join('workshop_leader', 'leader.id = workshop_leader.leader_id', 'left outer')
+                    ->where('workshop_leader.workshop_id is null')
+                    ->or_where('workshop_leader.workshop_id != ' . $workshop_id)
+                    ->get()->result('leader');
+                return $available_leaders;
+            } else {
+                return parent::selectAll();
+            }
+        }
+    }
+    
+    class leader extends entity {
+        
+        private $name;
+        
+        function setName($value) {
+            $this->name = $value;
+        }
+        
+        function getName() {
+            return $this->name;
+        }
+        
+        function getArrayForDatabaseInsert() {
+            return array(
+                'name' => $this->getName()
+            );
+        }
+        
+        function getArrayForDatabaseUpdate() {
+            return array_merge($this->getArrayForDatabaseInsert(), array(
+            
+            ));
+        }
+        
+        function getArrayForJSON() {
+            return array(
+                'id' => $this->getId(),
+                'name' => $this->getName()
+            );
+        }
+    }

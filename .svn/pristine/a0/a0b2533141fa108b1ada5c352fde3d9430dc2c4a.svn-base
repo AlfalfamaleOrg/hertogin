@@ -1,0 +1,102 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+class Admin extends MY_Controller
+{
+    function index() {  
+        $this->page('workshop');
+    }
+    
+    function page($name) {
+        $data['user_id']    = $this->user_id;
+        $data['username']    = $this->tank_auth->get_username();
+        $data['page'] = $name;
+        $this->load->view('admin', $data);
+    }
+    
+    function javascript($page) {
+        $this->output->set_content_type('text/javascript');
+        $this->load->view('backend/image_window.js');
+        $this->load->view('backend/leader_window.js');
+        $this->load->view('backend/' . $page . '.js');
+        $this->load->view('admin.js');
+    }
+    
+    public function read($name) {        
+        $model = $name . '_model';
+        
+        $object_array = $this->$model->selectAll();
+        
+        $output_array = array();
+        
+        foreach ($object_array as $object) {
+            $output_array[] = $object->getArrayForJSON();
+        }
+        
+        outputJSON($output_array);
+    }
+    
+    public function update($name) {        
+        $model = $name . '_model';
+        
+        $data = inputJSON();
+        
+        foreach ($data as $part) {
+            $object = new $name();
+            $object->updateWithArray($part);
+            $this->$model->update($object);
+        }
+    }
+    
+    public function post($name) {
+        $model = $name . '_model';
+        
+        $object = new $name();
+        $object->updateWithArray($_POST);
+        
+        $result = $this->$model->create($object);
+        
+        if (is_integer($result)) {
+            $object->setId($result);
+        } else if (is_object($result)) {
+            $object = $result;
+        }
+        
+        $output_array = array(
+            'success' => true,
+            'data' => $object->getArrayForJSON()
+        );
+        
+        outputJSON($output_array, false);
+    }
+    
+    public function create($name) {
+        $model = $name . '_model';
+        
+        $data = inputJSON();
+        
+        foreach ($data as $part) {
+            $object = new $name();
+            $object->updateWithArray($part);
+            $object->setId($this->$model->create($object));
+        }
+        
+        $output_array = array(
+            'success' => true,
+            'data' => $object->getArrayForJSON()
+        );
+        
+        outputJSON($output_array);
+    }
+    
+    public function destroy($name) {
+        $model = $name . '_model';
+        
+        $data = inputJSON();
+        
+        foreach ($data as $part) {
+            $object = new $name();
+            $object->updateWithArray($part);
+            $this->$model->delete($object);
+        }
+    }
+}

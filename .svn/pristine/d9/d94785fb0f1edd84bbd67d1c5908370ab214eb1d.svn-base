@@ -1,0 +1,237 @@
+Ext.require(['*']);
+Ext.onReady(function(){
+    
+    preWork = new preWork();
+    
+    var store = Ext.create('Ext.data.Store', {
+        model: preWork.name,
+        autoLoad: true,
+        autoSync: true,
+        proxy: {
+            type: 'ajax',
+            api: {
+                read: site_url + '/admin/read/' + preWork.name,
+                create: site_url + '/admin/create/' + preWork.name,
+                update: site_url + '/admin/update/' + preWork.name,
+                destroy: site_url + '/admin/destroy' + preWork.name
+            },
+            reader: {   
+                type: 'json',
+                successProperty: 'success',
+                root: 'data',
+                messageProperty: 'message'
+            },
+            writer: {
+                type: 'json',
+                writeAllFields: true,
+                root: 'data'
+            },
+            listeners: {
+                exception: function(proxy, response, operation){
+                    Ext.MessageBox.show({
+                        title: 'REMOTE EXCEPTION',
+                        msg: operation.getError(),
+                        icon: Ext.MessageBox.ERROR,
+                        buttons: Ext.Msg.OK
+                    });
+                }
+            }
+        },
+        listeners: {
+            write: function(proxy, operation){
+                if (operation.action == 'destroy') {
+                } else {
+                    Ext.getCmp('grid').getSelectionModel().select(operation.getRecords()[0]);
+                    Ext.getCmp('form').setActiveRecord(operation.getRecords()[0]);
+                }
+                Ext.getCmp('main').setLoading(false);
+                Ext.example.msg(operation.action, operation.resultSet.message);
+            }
+        }
+    });
+
+    Ext.create('Ext.Viewport', {
+        layout: {
+            type: 'border'
+        },
+        defaults: {
+            split: true
+        },
+        items: [{
+            region: 'center',
+            border: false,
+            layout: {
+                type: 'border'
+            },
+            defaults: {
+                split: true
+            },
+            items: [{
+                id: 'main',
+                region: 'center',
+                layout: {
+                    type: 'border'
+                },
+                defaults: {
+                    split: true
+                },
+                items: [{
+                    region: 'west',
+                    width: '45%',
+                    items: [
+                        Ext.create('Ext.grid.Panel', {
+                            id: 'grid',
+                            title: preWork.name,
+                            store: store,
+                            columns: [
+                                { header: 'Id', dataIndex: 'id', hidden: true },
+                                { header: 'Naam',  dataIndex: 'name', flex: true },
+                                {
+                                    xtype: 'actioncolumn',
+                                    width: 25,
+                                    items: [{
+                                        icon: 'images/icons/delete.png',
+                                        tooltip: 'Verwijder',
+                                        handler: function(grid, rowIndex, colIndex) {
+                                            Ext.getCmp('main').setLoading(true);
+                                            store.removeAt(rowIndex);
+                                            Ext.getCmp('grid').getSelectionModel().deselectAll();
+                                            Ext.getCmp('form').setActiveRecord(null);
+                                        }
+                                    }]
+                                }
+                            ],
+                            listeners: {
+                                selectionchange: function(selectionModel, selected) {
+                                    if (selected.length) {
+                                        Ext.getCmp('form').setActiveRecord(selected[0]);
+                                    }
+                                }
+                            }
+                        })
+                    ],
+                    layout: {
+                        type: 'fit',
+                        reserveScrollbar: true
+                    },
+                    dockedItems: [{
+                        xtype: 'toolbar',
+                        dock: 'top',
+                        items: ['->', {
+                            icon: 'images/icons/add.png',
+                            text: 'Nieuw',
+                            handler: function() {
+                                Ext.getCmp('grid').getSelectionModel().deselectAll();
+                                Ext.getCmp('form').setActiveRecord(null);
+                            }
+                        }]
+                    }]
+                },{
+                    region: 'center',
+                    width: '45%',
+                    items: [
+                        Ext.create('Ext.form.Panel', {
+                            id: 'form',
+                            title: 'Workshop',
+                            bodyPadding: 5,
+                            activeRecord: null,
+                            overflowY: 'auto',
+
+                            // Fields will be arranged vertically, stretched to full width
+                            layout: 'anchor',
+                            defaults: {
+                                anchor: '100%'
+                            },
+                            
+                            setActiveRecord: function(record) {
+                                this.activeRecord = record;
+                                
+                                if (this.activeRecord) {
+                                    this.loadRecord(this.activeRecord);
+                                    preWork.setRecord();
+                                } else {
+                                    this.getForm().reset();
+                                    preWork.resetForm();
+                                }
+                            },
+
+                            // The fields
+                            defaultType: 'textfield',
+                            items: preWork.formItems,
+
+                            // Reset and Submit buttons
+                            buttons: [{
+                                text: 'Opslaan',
+                                icon: 'images/icons/disk.png',
+                                formBind: true, //only enabled once the form is valid
+                                disabled: true,
+                                handler: function() {
+                                    var form = this.up('form');
+                                    var activeRecord = form.activeRecord;
+                                    form = form.getForm();
+                                    if (form.isValid()) {
+                                        Ext.getCmp('main').setLoading(true);
+                                        if (activeRecord) {
+                                            form.updateRecord(form.activeRecord);
+                                        } else {
+                                            store.insert(0, form.getValues());
+                                        }
+                                    }
+                                }
+                            }].concat(preWork.buttons)
+                        })
+                    ]
+                },{
+                    region: 'east',
+                    title: 'Komende 2 weken',
+                    collapsible: true,
+                    width: '10%',
+                    minWidth: 100
+                }],
+                dockedItems: [{
+                    xtype: 'toolbar',
+                    dock: 'top',
+                    items: [{
+                        text: 'Workshops',
+                        handler: function() {
+                            document.location = site_url + '/admin/page/workshop';
+                        }
+                    },{
+                        text: 'Boekingen',
+                        handler: function() {
+                            document.location = site_url + '/admin/page/workshop';
+                        }
+                    },{
+                        text: 'Leiders',
+                        handler: function() {
+                            document.location = site_url + '/admin/page/leader';
+                        }
+                    },{
+                        text: 'Ruimtes',
+                        handler: function() {
+                            document.location = site_url + '/admin/page/workshop';
+                        }
+                    },{
+                        text: 'Bezoekers',
+                        handler: function() {
+                            document.location = site_url + '/admin/page/workshop';
+                        }
+                    },
+                        '->'
+                    ,{
+                        text: 'Toon grote agenda'
+                    }]
+                }]
+            }],
+            dockedItems: [{
+                xtype: 'toolbar',
+                dock: 'top',
+                items: [
+                    '->'
+                ,{
+                    text: 'Log uit'
+                }]
+            }]
+        }]
+    });
+});

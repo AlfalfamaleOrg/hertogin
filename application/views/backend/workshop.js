@@ -1,0 +1,145 @@
+var preWork;
+
+Ext.onReady(function(){
+    Ext.define('workshop', {
+        extend: 'Ext.data.Model',
+        fields: [
+            {name: 'id',  type: 'int'},
+            {name: 'name',   type: 'string'},
+            {name: 'description_text',   type: 'string'},
+            {name: 'intro_text',   type: 'string'},
+            {name: 'workshop_text',   type: 'string'},
+            {name: 'price_text',   type: 'string'},
+            {name: 'duration_text',   type: 'string'},
+            {name: 'attendees_text',   type: 'string'},
+            {name: 'contact_text',   type: 'string'},
+            {name: 'type',   type: 'string'}
+        ]
+    });
+    
+    preWork = function() {
+        this.name = 'workshop';
+        
+        this.setRecord = function() {
+            Ext.getCmp('image_button').enable();
+            Ext.getCmp('leader_button').enable();
+        };
+        
+        this.resetForm = function() {
+            Ext.getCmp('image_button').disable();
+            Ext.getCmp('leader_button').disable();
+        };
+        
+        this.buttons = [{
+           text: 'Afbeeldingen',
+           id: 'image_button',
+           disabled: true,
+            //icon: 'images/icons/disk.png',
+            handler: function() {
+                image_window.workshop_id = this.up('form').activeRecord.data.id;
+                image_window.show();
+            } 
+        },{
+           text: 'Leiders',
+           id: 'leader_button',
+           disabled: true,
+            //icon: 'images/icons/disk.png',
+            handler: function() {
+                leader_window.workshop_id = this.up('form').activeRecord.data.id;
+                leader_window.show();
+            } 
+        }];
+         
+        this.formItems = [{
+            name: 'id',
+            disabled: true,
+            hidden: true
+        },Ext.create('Ext.form.ComboBox',{
+            fieldLabel: 'Type',
+            name: 'type',
+            allowBlank: false,
+            xtype: 'comboBox',
+            queryMode: 'local',
+            displayField: 'name',
+            valueField: 'id',
+            store: Ext.create('Ext.data.Store', {
+                fields: ['type', 'name'],
+                data : [
+                    {"id":"workshop", "name":"workshop"},
+                    {"id":"cursus", "name":"cursus"}
+                    //...
+                ]
+            })
+        }),{
+            fieldLabel: 'Naam',
+            name: 'name',
+            allowBlank: false
+        },{
+            fieldLabel: 'Beschrijving',
+            name: 'description_text',
+            allowBlank: true,
+            xtype: 'htmleditor',
+            enableAlignments: false,
+            enableColors: false,
+            enableFont: false,
+            enableFontSize: false,
+            enableSourceEdit: false,
+            height: 100
+        },{
+            fieldLabel: 'Workshop',
+            name: 'workshop_text',
+            allowBlank: true,
+            xtype: 'htmleditor',
+            enableAlignments: false,
+            enableColors: false,
+            enableFont: false,
+            enableFontSize: false,
+            enableSourceEdit: false,
+            height: 100
+        },{
+            fieldLabel: 'Duur',
+            name: 'duration_text',
+            allowBlank: true,
+            xtype: 'htmleditor',
+            enableAlignments: false,
+            enableColors: false,
+            enableFont: false,
+            enableFontSize: false,
+            enableSourceEdit: false,
+            height: 100
+        },{
+            fieldLabel: 'Aantal personen',
+            name: 'attendees_text',
+            allowBlank: true,
+            xtype: 'htmleditor',
+            enableAlignments: false,
+            enableColors: false,
+            enableFont: false,
+            enableFontSize: false,
+            enableSourceEdit: false,
+            height: 100
+        },{
+            fieldLabel: 'Prijzen',
+            name: 'price_text',
+            allowBlank: true,
+            xtype: 'htmleditor',
+            enableAlignments: false,
+            enableColors: false,
+            enableFont: false,
+            enableFontSize: false,
+            enableSourceEdit: false,
+            height: 100
+        },{
+            fieldLabel: 'Contact / Aanmelden',
+            name: 'contact_text',
+            allowBlank: true,
+            xtype: 'htmleditor',
+            enableAlignments: false,
+            enableColors: false,
+            enableFont: false,
+            enableFontSize: false,
+            enableSourceEdit: false,
+            height: 100
+        }]
+    }
+});
